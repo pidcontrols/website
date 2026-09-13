@@ -1,0 +1,98 @@
+{
+  "logo": "/images/logo.png",
+  "yearsBadge": "/images/10-years-excellence.png",
+  "brandsStrip": "",
+  "partners": [
+    {
+      "id": "siemens",
+      "alt": "Siemens partner",
+      "src": "/images/company1.png"
+    },
+    {
+      "id": "schneider",
+      "alt": "Schneider Electric partner",
+      "src": "/images/company2.png"
+    },
+    {
+      "id": "abb",
+      "alt": "ABB partner",
+      "src": "/images/company3.png"
+    },
+    {
+      "id": "honeywell",
+      "alt": "Honeywell partner",
+      "src": "/images/company4.png"
+    },
+    {
+      "id": "trend",
+      "alt": "Trend partner",
+      "src": "/images/company5.png"
+    },
+    {
+      "id": "belimo",
+      "alt": "Belimo partner",
+      "src": "/images/company6.png"
+    },
+    {
+      "id": "dwyer",
+      "alt": "Dwyer partner",
+      "src": "/images/company7.png"
+    },
+    {
+      "id": "vykon",
+      "alt": "Vykon by Tridium partner",
+      "src": "/images/company8.png"
+    },
+    {
+      "id": "isma",
+      "alt": "iSMA Controlli partner",
+      "src": "/images/company9.png"
+    }
+  ],
+  "clients": [
+    {
+      "id": "aurigene",
+      "name": "Aurigene Pharmaceutical Services",
+      "src": "/images/aurigene.jpg"
+    },
+    {
+      "id": "camfil",
+      "name": "Camfil Air Pollution Control",
+      "src": "/images/camfil.jpg"
+    },
+    {
+      "id": "ichor",
+      "name": "Ichor Biologics",
+      "src": "/images/ichor.png"
+    },
+    {
+      "id": "ilean",
+      "name": "iClean / Takasago Thermal Engineering",
+      "src": "/images/ilean.jpg"
+    },
+    {
+      "id": "popvax",
+      "name": "PopVax",
+      "src": "/images/popvax.png"
+    }
+  ],
+  "serviceImages": {
+    "building-management-system": "/images/bms.png",
+    "hvac-integration": "/images/hvac.png",
+    "environmental-monitoring-system": "/images/ems.png",
+    "energy-monitoring-system": "/images/Enms.png",
+    "chiller-plant-manager": "/images/chillerplant.png",
+    "hmi-solutions": "/images/hmi.png",
+    "iaq-monitoring": "/images/IAQ.png",
+    "control-panels": "/images/controlpanels.png"
+  },
+  "industryImages": {
+    "commercial": "/images/commercial.png",
+    "healthcare": "/images/healthcare.png",
+    "pharmaceutical": "/images/pharmaceutical.png",
+    "industrial": "/images/industrial.png",
+    "education": "/images/educational.png",
+    "datacenter": "/images/datacenters.png"
+  },
+  "version": 7
+}
