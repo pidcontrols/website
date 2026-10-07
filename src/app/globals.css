@@ -241,26 +241,17 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .service-image-wrapper:hover .service-image {
-    transform: none;
-  }
-  .service-section > div > div:first-child,
-  .service-section > div > div:last-child {
-    animation: none;
-  }
-  .service-highlight {
-    animation: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-  .scroll-reveal {
-    opacity: 1;
+  .service-image-wrapper:hover .service-image {
     transform: none;
+  }
+  .service-section > div > div:first-child,
+  .service-section > div > div:last-child,
+  .service-highlight {
+    animation: none;
   }
 }
 

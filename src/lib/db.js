@@ -89,11 +89,3 @@ export async function dbDeleteImages(names) {
   await ensureSchema()
   await p.query('DELETE FROM site_images WHERE name = ANY($1)', [names])
 }
-
-export async function dbListImageNames() {
-  const p = getPool()
-  if (!p) return []
-  await ensureSchema()
-  const { rows } = await p.query('SELECT name FROM site_images')
-  return rows.map((r) => r.name)
-}

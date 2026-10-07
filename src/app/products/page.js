@@ -4,7 +4,7 @@ import PageHeader from '@/components/PageHeader'
 import ScrollReveal from '@/components/ScrollReveal'
 import Link from 'next/link'
 import { useSiteAssets } from '@/components/SiteAssetsContext'
-import { Cpu, Monitor, CheckCircle, ArrowRight } from '@/components/Icons'
+import { CheckCircle, ArrowRight } from '@/components/Icons'
 
 export default function ProductsPage() {
   const { serviceImages } = useSiteAssets()

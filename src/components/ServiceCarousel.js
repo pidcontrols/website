@@ -11,7 +11,6 @@ export default function ServiceCarousel({ services }) {
   const viewportRef = useRef(null)
   const railRef = useRef(null)
   const cardRefs = useRef([])
-  const containerRef = useRef(null)
   const reduced = usePrefersReducedMotion()
 
   const [activeIndex, setActiveIndex] = useState(0)
@@ -242,7 +241,6 @@ export default function ServiceCarousel({ services }) {
   return (
     <>
       <div
-        ref={containerRef}
         className="relative"
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
@@ -378,23 +376,6 @@ export default function ServiceCarousel({ services }) {
       </div>
 
       <style>{`
-        @keyframes carousel-glow-pulse {
-          0%, 100% { opacity: 0.06; transform: scale(0.95); }
-          50% { opacity: 0.12; transform: scale(1.05); }
-        }
-        .animate-carousel-glow {
-          animation: carousel-glow-pulse 5s ease-in-out infinite;
-        }
-        @keyframes circuit-flow {
-          to { stroke-dashoffset: -200; }
-        }
-        .animate-circuit-flow {
-          animation: circuit-flow 4s linear infinite;
-        }
-        .animate-circuit-flow-delay {
-          animation: circuit-flow 6s linear infinite;
-        }
-
         .card-inner:hover {
           transform: scale(1.03) !important;
           border-color: rgba(76, 175, 80, 0.5) !important;
@@ -416,11 +397,6 @@ export default function ServiceCarousel({ services }) {
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .animate-carousel-glow,
-          .animate-circuit-flow,
-          .animate-circuit-flow-delay {
-            animation: none !important;
-          }
           .card-inner:hover {
             transform: none !important;
           }

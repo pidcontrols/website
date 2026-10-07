@@ -55,7 +55,6 @@ export default function Home() {
   const { serviceImages, industryImages: industrySrcs, yearsBadge } = useSiteAssets()
   const heroRef = useRef(null)
   const heroLayersRef = useRef(null)
-  const parallaxRef = useRef(false)
 
   const resolvedServices = services.map((S) => ({ ...S, image: serviceImages?.[S.imageKey] }))
   const resolvedIndustries = industryImages.map((I) => ({ ...I, src: industrySrcs?.[I.key] }))
@@ -64,7 +63,6 @@ export default function Home() {
     if (reduced) return
     const supportsHover = window.matchMedia('(hover: hover)').matches
     if (!supportsHover) return
-    parallaxRef.current = true
     const onMove = (e) => {
       const el = heroRef.current
       const layers = heroLayersRef.current
@@ -302,9 +300,7 @@ export default function Home() {
       {/* CTA Banner */}
       <section className="gradient-dark py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06] cta-grid-bg pointer-events-none" />
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234CAF50' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div className="absolute inset-0 opacity-10 circuit-overlay pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">

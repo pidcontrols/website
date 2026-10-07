@@ -49,8 +49,3 @@ export const SLOT_SPECS = {
     format: 'JPG / PNG / WebP',
   },
 }
-
-export const UPLOAD_RULES = {
-  maxGlobalBytes: 5 * 1024 * 1024,
-  allowedExtensions: ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'avif'],
-}

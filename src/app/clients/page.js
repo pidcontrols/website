@@ -26,26 +26,23 @@ export default function ClientsPage() {
           </ScrollReveal>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {clients.map((client, i) => {
-                const isLastAndOdd = i === clients.length - 1 && clients.length % 2 !== 0
-                return (
-                  <ScrollReveal key={client.name}>
-                    <div className={`card group text-center h-full flex flex-col items-center justify-center ${isLastAndOdd ? 'lg:col-start-2' : ''}`}>
-                      <div className="w-full h-56 sm:h-64 md:h-72 flex items-center justify-center p-4 md:p-6 bg-gray-50 rounded-xl">
-                        <img
-                          src={client.src}
-                          alt={`${client.name} - Valued Client of PID Controls`}
-                          className="max-w-full max-h-full w-auto h-auto object-contain transition-all duration-300 group-hover:scale-105"
-                          loading={i < 2 ? 'eager' : 'lazy'}
-                          width={320}
-                          height={140}
-                        />
-                      </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+              {clients.map((client, i) => (
+                <ScrollReveal key={client.name}>
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-2.5 sm:p-3 border border-gray-200/60 hover:border-[#4CAF50]/40 group text-center h-full flex flex-col items-center justify-center">
+                    <div className="w-full h-20 sm:h-24 flex items-center justify-center p-2 bg-gray-50/70 rounded border border-gray-100">
+                      <img
+                        src={client.src}
+                        alt={`${client.name} - Valued Client of PID Controls`}
+                        className="max-h-12 sm:max-h-14 max-w-[130px] sm:max-w-[150px] w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                        loading={i < 4 ? 'eager' : 'lazy'}
+                        width={150}
+                        height={56}
+                      />
                     </div>
-                  </ScrollReveal>
-                )
-              })}
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
           </div>
         </div>
